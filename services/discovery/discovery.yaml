@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: discovery
+  name: discovery
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: discovery
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: discovery
+    spec:
+      containers:
+      - image: adama93/discovery:latest
+        name: discovery
+        ports:
+          - containerPort: 8761
+         
+          
+

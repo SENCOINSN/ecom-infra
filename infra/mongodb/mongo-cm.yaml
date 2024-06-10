@@ -1,0 +1,6 @@
+apiVersion: v1
+data:
+  url: mongo-nodeport-svc
+kind: ConfigMap
+metadata:
+  name: mongodb-cm
