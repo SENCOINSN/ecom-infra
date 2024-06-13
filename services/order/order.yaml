@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: order
+  name: order
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: order
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: order
+    spec:
+      containers:
+      - image: adama93/order-service:latest
+        name: order
+        ports:
+          - containerPort: 8070
+         
+          
+

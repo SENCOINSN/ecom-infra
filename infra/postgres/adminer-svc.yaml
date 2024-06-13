@@ -6,9 +6,9 @@ metadata:
   name: adminer
 spec:
   ports:
-  - port: 8080
+  - port: 8083
     protocol: TCP
-    targetPort: 8080
+    targetPort: 8083
     nodePort: 30090
   selector:
     run: adminer

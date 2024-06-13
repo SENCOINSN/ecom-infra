@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: product
+  name: product
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: product
+    spec:
+      containers:
+      - image: adama93/product-service:latest
+        name: product
+        ports:
+          - containerPort: 8050
+         
+          
+
