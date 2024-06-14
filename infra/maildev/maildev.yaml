@@ -30,6 +30,7 @@ metadata:
 spec:
   selector:
     app: maildev
+  type: NodePort
   ports:
     - name: smtp
       protocol: TCP
